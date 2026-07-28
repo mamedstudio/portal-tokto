@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokto & Cupom Clic | Ecossistema de Vendas e Descontos</title>
+  <!-- Tailwind CSS CDN para estilização rápida e moderna -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tokto: '#F96302', // Laranja Tokto
+            cupom: '#2B3A4A', // Tom escuro elegante para Cupom Clic
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- NAVBAR / MENU SUPERIOR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGOS -->
+      <div class="flex items-center gap-3">
+        <span class="text-2xl font-black text-tokto tracking-tight">tokto</span>
+        <span class="text-gray-300">|</span>
+        <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Cupom Clic</span>
+      </div>
+
+      <!-- MENU NAVEGAÇÃO FERRAMENTAS -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="https://cupomclic.tokto.com.br/cupons" class="text-gray-600 hover:text-tokto font-medium transition">Cupons</a>
+        
+        <!-- DROPDOWN DE FERRAMENTAS -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-gray-600 hover:text-tokto font-medium py-2 transition">
+            Ferramentas Tokto
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          
+          <div class="absolute right-0 w-56 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none group-hover:pointer-events-auto p-2">
+            <a href="https://estudio-cupomclic.vercel.app" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-tokto rounded-lg">🎨 Estúdio</a>
+            <a href="https://eventos-toktomarilia.vercel.app" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-tokto rounded-lg">🎟️ Eventos</a>
+            <a href="https://agendamento-cupomclic.vercel.app" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-tokto rounded-lg">📅 Agendamento</a>
+            <a href="https://provoucomprou-cupomclic.vercel.app" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-tokto rounded-lg">🏷️ Provou Comprou</a>
+            <a href="https://provador-cupomclic.vercel.app" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-tokto rounded-lg">👗 Provador</a>
+            <a href="https://note-cupomclic.vercel.app" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-tokto rounded-lg">📝 Note</a>
+          </div>
+        </div>
+
+        <a href="https://tokto.com.br" class="bg-tokto text-white px-5 py-2.5 rounded-full font-bold hover:bg-orange-600 transition shadow-md shadow-orange-500/20">
+          Sou Lojista
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION - DUAL CAPA (SPLIT) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      
+      <!-- LADO CONSUMIDOR (CUPOM CLIC) -->
+      <div class="bg-white rounded-3xl p-8 sm:p-10 border border-gray-100 shadow-xl shadow-gray-200/50 flex flex-col justify-between hover:border-gray-300 transition-all">
+        <div>
+          <span class="bg-blue-50 text-blue-600 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">Para Consumidores</span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 leading-tight">
+            Pegue cupons exclusivos das suas lojas favoritas.
+          </h1>
+          <p class="text-gray-600 mt-4 text-base sm:text-lg">
+            Resgate descontos na hora e use direto no Instagram e nas lojas parceiras do ecossistema Tokto.
+          </p>
+        </div>
+
+        <!-- MOCKUP VISUAL CONSUMIDOR -->
+        <div class="my-8 bg-gradient-to-tr from-blue-50 to-indigo-50 rounded-2xl p-6 text-center border border-blue-100">
+          <div class="bg-white max-w-xs mx-auto rounded-2xl shadow-lg p-4 border border-gray-100">
+            <span class="text-xs text-gray-400 font-bold uppercase">Cupom Ativo</span>
+            <div class="text-2xl font-black text-indigo-600 my-1">10% OFF</div>
+            <p class="text-xs text-gray-500">Válido na Sacolinha do Instagram</p>
+          </div>
+        </div>
+
+        <a href="https://cupomclic.tokto.com.br/cupons" class="block text-center bg-cupom text-white py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 transition shadow-lg">
+          Ver Cupons Disponíveis →
+        </a>
+      </div>
+
+      <!-- LADO LOJISTA (TOKTO + INSTAGRAM) -->
+      <div class="bg-gradient-to-br from-orange-500 to-tokto rounded-3xl p-8 sm:p-10 text-white shadow-xl shadow-orange-500/20 flex flex-col justify-between">
+        <div>
+          <span class="bg-white/20 text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md">Para Lojistas</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-4 leading-tight">
+            Venda mais no Instagram com Sacolinha & Cupons.
+          </h2>
+          <p class="text-orange-100 mt-4 text-base sm:text-lg">
+            Cadastre sua loja na Tokto, habilite a Sacolinha de compras e ofereça cupons automáticos para seus clientes.
+          </p>
+        </div>
+
+        <!-- MOCKUP VISUAL LOJISTA -->
+        <div class="my-8 bg-white/10 rounded-2xl p-6 text-center border border-white/20 backdrop-blur-sm">
+          <div class="bg-white text-gray-800 max-w-xs mx-auto rounded-2xl shadow-lg p-4">
+            <span class="text-xs text-tokto font-bold uppercase">Integração Tokto</span>
+            <div class="text-base font-extrabold mt-1">Sacolinha + Cupom Clic</div>
+            <p class="text-xs text-gray-500 mt-1">Ativo e pronto para uso</p>
+          </div>
+        </div>
+
+        <a href="https://tokto.com.br" class="block text-center bg-white text-tokto py-4 rounded-2xl font-bold text-lg hover:bg-orange-50 transition shadow-lg">
+          Cadastrar Minha Loja Agora →
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ CLEAN -->
+  <footer class="border-t border-gray-200 py-8 bg-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-500">
+      &copy; Tokto & Cupom Clic. Todos os direitos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
