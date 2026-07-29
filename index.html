@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOKTO — Balcão Digital & Cupom Clic</title>
+  <title>TOKTO — Balcão Digital & Checkout na Hora</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +39,16 @@
       background: linear-gradient(135deg, #F96302 0%, #D97706 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    /* MÁSCARA DE DEGRADÊ NA FOTO PRINCIPAL PARA MECLAR AO TÍTULO */
+    .hero-image-blend {
+      mask-image: linear-gradient(to right, transparent 0%, black 30%, black 80%, transparent 100%),
+                  linear-gradient(to bottom, black 85%, transparent 100%);
+      mask-composite: intersect;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%),
+                          linear-gradient(to bottom, black 85%, transparent 100%);
+      -webkit-mask-composite: source-in;
     }
   </style>
 </head>
@@ -83,52 +93,59 @@
     </div>
   </header>
 
-  <!-- HERO SECTION - SLOGAN NOVO DE ALTO IMPACTO -->
-  <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20 my-auto w-full">
+  <!-- HERO SECTION - FOTO MECLADA AO TÍTULO COM DEGRADÊ -->
+  <main class="max-w-7xl mx-auto px-6 py-10 lg:py-16 my-auto w-full">
     
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
-      
-      <!-- TEXTO PRINCIPAL DE IMPACTO -->
-      <div class="lg:col-span-7">
-        <span class="inline-block bg-orange-500/10 text-tokto border border-orange-500/20 text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-          Plataforma Integrada de E-Commerce Social
-        </span>
+    <div class="relative rounded-3xl overflow-hidden mb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-stone-900 leading-[1.08]">
-          Conectando consumidores e lojistas <br/>
-          <span class="text-stone-900">no nosso balcão digital.</span>
-        </h1>
+        <!-- TEXTO PRINCIPAL DE IMPACTO -->
+        <div class="lg:col-span-7 z-10 pr-0 lg:pr-4">
+          <span class="inline-block bg-orange-500/10 text-tokto border border-orange-500/20 text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+            E-Commerce Social com Checkout Instantâneo
+          </span>
+          
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-stone-900 leading-[1.06]">
+            Conectando consumidores e lojistas <br/>
+            <span class="text-stone-900">no nosso balcão digital.</span>
+          </h1>
 
-        <p class="text-2xl sm:text-3xl font-bold mt-6 title-gradient-orange tracking-tight">
-          Sacolinhas do Instagram para sua loja. Clica e compra!
-        </p>
+          <p class="text-2xl sm:text-3xl font-bold mt-6 title-gradient-orange tracking-tight">
+            Sacolinhas do Instagram com Checkout de compra na hora!
+          </p>
 
-        <p class="text-stone-600 text-base sm:text-lg mt-4 max-w-xl font-normal leading-relaxed">
-          O ponto de encontro perfeito no Instagram. Unimos a vantagem do cupom exclusivo para o consumidor com a estrutura completa que a sua loja precisa para vender na hora.
-        </p>
+          <p class="text-stone-600 text-base sm:text-lg mt-4 max-w-xl font-normal leading-relaxed">
+            O ponto de encontro perfeito no Instagram. Unimos a vantagem do cupom de desconto para o cliente com a tecnologia de checkout instantâneo que a sua loja precisa para fechar vendas no ato.
+          </p>
 
-        <!-- BOTOES DE AÇÃO -->
-        <div class="mt-10 flex flex-col sm:flex-row gap-4">
-          <a href="https://tokto.com.br" class="bg-tokto hover:bg-orange-600 text-white text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-xl shadow-orange-500/20 flex items-center justify-center gap-2">
-            <span>Cadastrar Minha Loja</span> &rarr;
-          </a>
-          <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white/80 hover:bg-white border border-stone-300 text-stone-800 text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-sm">
-            Pegar Cupons Ativos
-          </a>
-        </div>
-      </div>
-
-      <!-- FOTO PRINCIPAL CAPA -->
-      <div class="lg:col-span-5 relative">
-        <div class="relative rounded-3xl overflow-hidden border border-stone-300/80 shadow-2xl bg-white p-2">
-          <img src="capa-banner.jpg" alt="Balcão Digital Tokto" class="w-full h-[460px] object-cover rounded-2xl">
-          <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-stone-200/80 shadow-lg flex items-center justify-between text-xs">
-            <span class="font-bold text-stone-800 uppercase tracking-widest text-[11px]">Sacolinha & Instagram</span>
-            <span class="text-tokto font-black tracking-widest text-[11px]">CLICA E COMPRA</span>
+          <!-- BOTOES DE AÇÃO -->
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="https://tokto.com.br" class="bg-tokto hover:bg-orange-600 text-white text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-xl shadow-orange-500/20 flex items-center justify-center gap-2">
+              <span>Cadastrar Minha Loja</span> &rarr;
+            </a>
+            <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white/90 hover:bg-white border border-stone-300 text-stone-800 text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-sm">
+              Pegar Cupons Ativos
+            </a>
           </div>
         </div>
-      </div>
 
+        <!-- FOTO INTEGRADA COM MÁSCARA DE GRADIENTE QUE FUSA AO TÍTULO -->
+        <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+          <div class="relative w-full h-[480px] lg:h-[540px] hero-image-blend">
+            <img src="capa-banner.jpg" alt="Balcão Digital Tokto" class="w-full h-full object-cover rounded-3xl">
+          </div>
+          
+          <!-- BADGE FLUTUANTE DE CHECKOUT -->
+          <div class="absolute bottom-6 left-4 right-4 sm:left-8 sm:right-8 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-stone-200/80 shadow-xl flex items-center justify-between text-xs z-20">
+            <div>
+              <div class="font-bold text-stone-900 uppercase tracking-widest text-[11px]">Checkout Instantâneo</div>
+              <div class="text-[11px] text-stone-500">Sacolinha Meta + Pagamento no Ato</div>
+            </div>
+            <span class="bg-emerald-100 text-emerald-800 font-extrabold px-3 py-1 rounded-full text-[10px] tracking-wider uppercase">Compra na Hora</span>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <!-- SEÇÃO DUPLA - DUAS PONTAS DO BALCÃO -->
@@ -136,12 +153,12 @@
       
       <!-- TÍTULO EDITORIAL DA SEÇÃO -->
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-widest text-tokto block mb-2">Plataforma Integrada</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-tokto block mb-2">Ecossistema Completo</span>
         <h2 class="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-tight leading-snug">
           Duas pontas. A mesma conexão.
         </h2>
         <p class="text-stone-500 text-base mt-3 font-normal">
-          Seja para resgatar a melhor vantagem ou para escalar as vendas da sua marca no Instagram.
+          Seja para resgatar a melhor vantagem ou para ativar o checkout de vendas da sua marca no Instagram.
         </p>
       </div>
 
@@ -154,7 +171,7 @@
             <span class="text-xs font-semibold uppercase tracking-widest text-stone-400 block mb-1">Para o Consumidor</span>
             <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Cupom Clic</h3>
             <p class="text-stone-600 text-sm sm:text-base mt-3 leading-relaxed">
-              Encontre o produto desejado no balcão digital e resgate cupons exclusivos para comprar direto das suas lojas preferidas.
+              Encontre o produto desejado no balcão digital, resgate cupons exclusivos e conclua sua compra direto na loja parceira.
             </p>
           </div>
 
@@ -176,7 +193,7 @@
             <span class="text-xs font-semibold uppercase tracking-widest text-tokto block mb-1">Para o Lojista</span>
             <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Credenciamento Tokto</h3>
             <p class="text-stone-600 text-sm sm:text-base mt-3 leading-relaxed">
-              Coloque seus produtos no balcão digital com Sacolinha do Instagram, cupons automáticos e o ecossistema completo Tokto.
+              Coloque seus produtos no balcão digital com Sacolinha do Instagram, checkout de compra na hora e todo o ecossistema Tokto.
             </p>
           </div>
 
