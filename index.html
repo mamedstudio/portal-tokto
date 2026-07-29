@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOKTO — O CLIC Que Faltava</title>
+  <title>TOKTO — O CLIC Que Faltava & Live Commerce</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,14 +38,15 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* COMPOSIÇÃO ORGÂNICA DA IMAGEM INTEGRADAS AO DESIGN */
-    .hero-blend-container {
-      background: linear-gradient(90deg, #F7F5F0 0%, rgba(247, 245, 240, 0.2) 50%, #F7F5F0 100%);
-    }
-    
+    /* MÁSCARAS DE GRADIENTE PARA AS FOTOS DE FUNDO INTEGRADAS */
     .hero-image-mask {
       mask-image: radial-gradient(circle at 60% 50%, black 40%, transparent 80%);
       -webkit-mask-image: radial-gradient(circle at 60% 50%, black 40%, transparent 80%);
+    }
+
+    .live-image-mask {
+      mask-image: radial-gradient(circle at 75% 50%, black 35%, transparent 85%);
+      -webkit-mask-image: radial-gradient(circle at 75% 50%, black 35%, transparent 85%);
     }
   </style>
 </head>
@@ -90,7 +91,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION - COMPOSIÇÃO EDITORIAL ÚNICA -->
+  <!-- HERO SECTION - BASE GUARDADA & APROVADA -->
   <main class="max-w-7xl mx-auto px-6 py-8 lg:py-16 my-auto w-full">
     
     <div class="relative rounded-[2.5rem] overflow-hidden p-6 sm:p-12 lg:p-16 border border-stone-300/60 bg-white/40 backdrop-blur-sm shadow-xl shadow-stone-200/50">
@@ -206,6 +207,52 @@
         </div>
 
       </div>
+    </div>
+
+    <!-- SEÇÃO NOVA: LIVE COMMERCE (MESMO FORMATO DO BANNER DE TOPO COM FOTO 03) -->
+    <div class="relative rounded-[2.5rem] overflow-hidden p-6 sm:p-12 lg:p-16 border border-orange-200/80 bg-white/60 backdrop-blur-sm shadow-xl shadow-orange-500/5 mt-16">
+      
+      <!-- FOTO 03 DE BACKGROUND INTEGRADA COM DEGRADÊ -->
+      <div class="absolute inset-0 z-0 opacity-25 lg:opacity-40 live-image-mask pointer-events-none">
+        <img src="foto03.png" alt="Live Commerce Tokto" class="w-full h-full object-cover object-right">
+      </div>
+
+      <div class="relative z-10 max-w-3xl">
+        
+        <span class="inline-block bg-orange-500 text-white text-[11px] font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 shadow-md shadow-orange-500/20">
+          ● Tokto Live Commerce
+        </span>
+        
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-stone-900 leading-[1.08]">
+          Suas lives com venda direta na tela do Instagram.
+        </h2>
+
+        <p class="text-xl sm:text-2xl font-bold mt-4 text-stone-800 tracking-tight leading-snug">
+          Organize e tenha a venda enquanto apresenta seus produtos.
+        </p>
+
+        <p class="text-tokto text-lg sm:text-xl font-extrabold mt-3 tracking-tight">
+          Sem DM, sem demora... clica e compra!
+        </p>
+
+        <!-- BOTÃO DE AÇÃO LIVE COMMERCE -->
+        <div class="mt-8">
+          <a href="https://tokto.com.br" class="inline-flex items-center gap-2 bg-stone-900 hover:bg-black text-white font-bold text-sm px-9 py-4 rounded-full transition shadow-xl">
+            <span>Ativar Live Commerce Na Minha Loja</span> &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <!-- BADGE FLUTUANTE DA LIVE -->
+      <div class="mt-12 lg:mt-0 lg:absolute bottom-8 right-8 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-stone-200/80 shadow-2xl flex items-center gap-4 max-w-xs z-20">
+        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg shrink-0">🎥</div>
+        <div>
+          <div class="font-extrabold text-stone-900 text-xs uppercase tracking-wider">Venda em Tempo Real</div>
+          <div class="text-[11px] text-stone-500 mt-0.5">Catálogo integrado direto na tela</div>
+        </div>
+      </div>
+
     </div>
 
   </main>
