@@ -7,32 +7,55 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          fontFamily: { 
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'] 
+          },
           colors: {
             tokto: '#F96302',
-            brandBg: '#FAF8F5',
-            brandCard: '#FFFFFF',
-            brandBorder: '#E8E5E0',
+            aesopBg: '#F6F4EF',
+            aesopCard: '#FFFFFF',
+            aesopBorder: '#E6E3DB',
           }
         }
       }
     }
   </script>
-</head>
-<body class="bg-[#FAF8F5] text-stone-900 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white">
+  <style>
+    body { background-color: #F6F4EF; color: #1C1B1A; }
+    
+    /* GRADIENTES E LUZ DE AMBIENTE SUTIL */
+    .ambient-glow {
+      background: 
+        radial-gradient(circle at 80% 20%, rgba(249, 99, 2, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 20% 70%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
+    }
 
-  <!-- BARRA SUPERIOR DE FERRAMENTAS (CLEAN & ELEGANTE) -->
-  <div class="border-b border-stone-200/80 bg-white/60 backdrop-blur-md text-xs py-2.5 px-6 text-stone-600">
+    .card-gradient-hover {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+    }
+
+    .title-gradient-orange {
+      background: linear-gradient(135deg, #F96302 0%, #D97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white ambient-glow">
+
+  <!-- TOP BAR (MINIMALISMO LUXUOSO) -->
+  <div class="border-b border-stone-300/40 bg-[#F6F4EF]/80 backdrop-blur-md text-[11px] tracking-widest uppercase py-3 px-6 text-stone-500">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-      <span class="text-tokto font-bold tracking-wider uppercase text-[11px] flex items-center gap-2 shrink-0">
-        <span class="w-2 h-2 rounded-full bg-tokto"></span> ECOSSISTEMA TOKTO
+      <span class="text-tokto font-bold flex items-center gap-2 shrink-0">
+        <span class="w-1.5 h-1.5 rounded-full bg-tokto"></span> ECOSSISTEMA TOKTO
       </span>
-      <div class="flex items-center gap-6 overflow-x-auto scrollbar-none font-medium text-xs text-stone-600">
+      <div class="flex items-center gap-8 overflow-x-auto scrollbar-none font-medium tracking-normal text-xs text-stone-600">
         <a href="https://estudio-cupomclic.vercel.app" target="_blank" class="hover:text-tokto transition">Estúdio</a>
         <a href="https://eventos-toktomarilia.vercel.app" target="_blank" class="hover:text-tokto transition">Eventos</a>
         <a href="https://agendamento-cupomclic.vercel.app" target="_blank" class="hover:text-tokto transition">Agendamento</a>
@@ -43,8 +66,8 @@
     </div>
   </div>
 
-  <!-- HEADER PRINCIPAL CLARO -->
-  <header class="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-xl border-b border-stone-200/80">
+  <!-- HEADER PRINCIPAL -->
+  <header class="sticky top-0 z-50 bg-[#F6F4EF]/90 backdrop-blur-xl border-b border-stone-300/50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
       <!-- LOGOS -->
@@ -59,102 +82,112 @@
       </div>
 
       <!-- BOTÃO DIREITO -->
-      <a href="https://tokto.com.br" class="bg-tokto hover:bg-orange-600 text-white text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full transition shadow-md shadow-orange-500/20">
+      <a href="https://tokto.com.br" class="bg-stone-900 hover:bg-black text-white text-xs font-semibold uppercase tracking-widest px-7 py-3.5 rounded-full transition shadow-md">
         Área do Lojista
       </a>
     </div>
   </header>
 
-  <!-- HERO SECTION - CLEAN EDITORIAL -->
+  <!-- HERO SECTION - ESTÉTIKA AESOP / HIGH END -->
   <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20 my-auto w-full">
     
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
       
       <!-- TEXTO PRINCIPAL -->
       <div class="lg:col-span-7">
-        <span class="inline-block bg-orange-100/80 text-tokto border border-orange-200/60 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-          Meta Commerce & Coupon Ecosystem
+        <span class="inline-block bg-orange-500/10 text-tokto border border-orange-500/20 text-[11px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+          Meta Commerce & Coupon Infrastructure
         </span>
         
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-stone-900 leading-[1.08]">
           Sua loja no Instagram. <br/>
-          <span class="text-tokto">Sacolinha & Cupons.</span>
+          <span class="title-gradient-orange">Sacolinha & Cupons.</span>
         </h1>
         
         <p class="text-stone-600 text-base sm:text-xl mt-6 max-w-xl font-normal leading-relaxed">
-          Infraestrutura completa para conectar seu catálogo ao consumidor moderno através de ofertas e integrações oficiais.
+          Infraestrutura refinada de vendas para conectar o catálogo do seu negócio ao público certo com inteligência de ofertas.
         </p>
 
         <!-- BOTOES DE AÇÃO -->
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="https://tokto.com.br" class="bg-stone-900 hover:bg-stone-800 text-white text-center font-bold text-sm px-8 py-4 rounded-2xl transition shadow-lg flex items-center justify-center gap-2">
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="https://tokto.com.br" class="bg-tokto hover:bg-orange-600 text-white text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-xl shadow-orange-500/20 flex items-center justify-center gap-2">
             <span>Cadastrar Minha Loja</span> &rarr;
           </a>
-          <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white hover:bg-stone-100 border border-stone-300 text-stone-800 text-center font-bold text-sm px-8 py-4 rounded-2xl transition shadow-sm">
+          <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white/80 hover:bg-white border border-stone-300 text-stone-800 text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-sm">
             Explorar Cupons
           </a>
         </div>
       </div>
 
-      <!-- FOTO PRINCIPAL CAPA -->
+      <!-- FOTO PRINCIPAL COM MOLDURA LUXO -->
       <div class="lg:col-span-5 relative">
-        <div class="relative rounded-3xl overflow-hidden border border-stone-200/90 shadow-2xl bg-white p-2">
-          <img src="capa-banner.jpg" alt="Instagram Tokto" class="w-full h-[440px] object-cover rounded-2xl">
-          <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl border border-stone-200 shadow-md flex items-center justify-between text-xs">
-            <span class="font-bold text-stone-800 uppercase tracking-wider">Integração Oficial Meta</span>
-            <span class="text-tokto font-black">TOKTO ACTIVE</span>
+        <div class="relative rounded-3xl overflow-hidden border border-stone-300/80 shadow-2xl bg-white p-2">
+          <img src="capa-banner.jpg" alt="Instagram Tokto" class="w-full h-[460px] object-cover rounded-2xl">
+          <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-stone-200/80 shadow-lg flex items-center justify-between text-xs">
+            <span class="font-bold text-stone-800 uppercase tracking-widest text-[11px]">Integração Oficial Meta</span>
+            <span class="text-tokto font-black tracking-widest text-[11px]">TOKTO ACTIVE</span>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- SEÇÃO DUPLA EDITORIAL - CONSUMIDOR X LOJISTA -->
-    <div class="pt-12 border-t border-stone-300/60">
-      <div class="text-center max-w-xl mx-auto mb-12">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Escolha a sua experiência</h2>
-        <p class="text-stone-500 text-sm mt-2">Acesso direto ao portal de cupons ou credenciamento de lojistas.</p>
+    <!-- SEÇÃO DUPLA CATEDRAL / AESOP STYLE -->
+    <div class="pt-16 border-t border-stone-300/60">
+      
+      <!-- TÍTULO EDITORIAL DE IMPACTO SENSACIONAL -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-tokto block mb-2">Duas portas de entrada</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-tight leading-snug">
+          Selecione a sua jornada.
+        </h2>
+        <p class="text-stone-500 text-base mt-3 font-normal">
+          Soluções desenhadas especificamente para clientes em busca de vantagem ou marcas em busca de escala.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- CARDS EDITORIAIS HUMANOS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         
         <!-- CARD CONSUMIDOR (FOTO 01) -->
-        <div class="bg-white border border-stone-200/90 rounded-3xl overflow-hidden shadow-lg shadow-stone-200/50 hover:shadow-2xl transition duration-500 flex flex-col justify-between group">
-          <div class="p-8 lg:p-10">
-            <span class="text-xs font-bold uppercase tracking-widest text-stone-400">01 / Consumidores</span>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-2">Cupom Clic</h3>
+        <div class="bg-white border border-stone-200 rounded-[2rem] overflow-hidden shadow-xl shadow-stone-200/40 hover:border-stone-400 transition duration-500 flex flex-col justify-between group">
+          <div class="p-8 sm:p-10">
+            <span class="text-xs font-semibold uppercase tracking-widest text-stone-400 block mb-1">Para Consumidores</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Cupom Clic</h3>
             <p class="text-stone-600 text-sm sm:text-base mt-3 leading-relaxed">
-              Resgate cupons e ofertas exclusivas das suas marcas favoritas para usar nas compras pelo Instagram.
+              Resgate vantagens e códigos de desconto ativos das marcas mais influentes para aplicar direto no Instagram.
             </p>
           </div>
 
-          <div class="relative h-72 overflow-hidden mx-4 mb-4 rounded-2xl">
+          <div class="relative h-80 overflow-hidden mx-4 mb-4 rounded-[1.5rem]">
             <img src="foto01.png" alt="Consumidora utilizando Cupom Clic" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            
             <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-              <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white text-stone-900 text-xs font-extrabold uppercase tracking-wider px-6 py-3 rounded-xl hover:bg-tokto hover:text-white transition shadow-md">
-                Acessar Cupons &rarr;
+              <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white/95 hover:bg-white text-stone-900 text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition shadow-lg backdrop-blur-md">
+                Acessar Portal de Cupons &rarr;
               </a>
             </div>
           </div>
         </div>
 
         <!-- CARD LOJISTA (FOTO 02) -->
-        <div class="bg-white border border-orange-200/80 rounded-3xl overflow-hidden shadow-lg shadow-orange-500/5 hover:shadow-2xl transition duration-500 flex flex-col justify-between group">
-          <div class="p-8 lg:p-10">
-            <span class="text-xs font-bold uppercase tracking-widest text-tokto">02 / Lojistas</span>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-2">Credenciamento Tokto</h3>
+        <div class="bg-white border border-orange-200/80 rounded-[2rem] overflow-hidden shadow-xl shadow-orange-500/5 hover:border-orange-400 transition duration-500 flex flex-col justify-between group">
+          <div class="p-8 sm:p-10">
+            <span class="text-xs font-semibold uppercase tracking-widest text-tokto block mb-1">Para Marcas & Lojistas</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Credenciamento Tokto</h3>
             <p class="text-stone-600 text-sm sm:text-base mt-3 leading-relaxed">
-              Habilite a Sacolinha do Instagram, ofereça cupons automáticos e acesse a suíte de soluções Tokto.
+              Conecte sua Sacolinha do Instagram, libere cupons automáticos na sacola de compras e ative a suíte Tokto.
             </p>
           </div>
 
-          <div class="relative h-72 overflow-hidden mx-4 mb-4 rounded-2xl">
+          <div class="relative h-80 overflow-hidden mx-4 mb-4 rounded-[1.5rem]">
             <img src="foto02.png" alt="Lojista no balcão de vendas" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            
             <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-              <a href="https://tokto.com.br" class="bg-tokto text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3 rounded-xl hover:bg-orange-600 transition shadow-md shadow-orange-500/20">
-                Cadastrar Loja &rarr;
+              <a href="https://tokto.com.br" class="bg-tokto hover:bg-orange-600 text-white text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition shadow-lg shadow-orange-500/20">
+                Cadastrar Minha Loja &rarr;
               </a>
             </div>
           </div>
@@ -165,8 +198,8 @@
 
   </main>
 
-  <!-- FOOTER CLEAN -->
-  <footer class="border-t border-stone-200 py-8 bg-white text-center text-xs text-stone-500 font-medium">
+  <!-- FOOTER LIMPO -->
+  <footer class="border-t border-stone-300/50 py-10 bg-[#F6F4EF] text-center text-xs text-stone-500 font-medium">
     &copy; TOKTO & CUPOM CLIC. Todos os direitos reservados.
   </footer>
 
