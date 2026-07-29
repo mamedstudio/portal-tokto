@@ -52,7 +52,7 @@
 </head>
 <body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white ambient-glow">
 
-  <!-- TOP BAR (MINIMALISMO LUXUOSO) -->
+  <!-- TOP BAR (EVENTOS REMOVIDO) -->
   <div class="border-b border-stone-300/40 bg-[#F7F5F0]/80 backdrop-blur-md text-[11px] tracking-widest uppercase py-3 px-6 text-stone-500">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
       <span class="text-tokto font-black flex items-center gap-2 shrink-0">
@@ -60,7 +60,6 @@
       </span>
       <div class="flex items-center gap-8 overflow-x-auto scrollbar-none font-medium tracking-normal text-xs text-stone-600">
         <a href="https://estudio-cupomclic.vercel.app" target="_blank" class="hover:text-tokto transition">Estúdio</a>
-        <a href="https://eventos-toktomarilia.vercel.app" target="_blank" class="hover:text-tokto transition">Eventos</a>
         <a href="https://agendamento-cupomclic.vercel.app" target="_blank" class="hover:text-tokto transition">Agendamento</a>
         <a href="https://provoucomprou-cupomclic.vercel.app" target="_blank" class="hover:text-tokto transition">Provou Comprou</a>
         <a href="https://provador-cupomclic.vercel.app" target="_blank" class="hover:text-tokto transition">Provador</a>
@@ -91,7 +90,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION - BASE GUARDADA & APROVADA -->
+  <!-- HERO SECTION PRINCIPAL -->
   <main class="max-w-7xl mx-auto px-6 py-8 lg:py-16 my-auto w-full">
     
     <div class="relative rounded-[2.5rem] overflow-hidden p-6 sm:p-12 lg:p-16 border border-stone-300/60 bg-white/40 backdrop-blur-sm shadow-xl shadow-stone-200/50">
@@ -184,7 +183,7 @@
           </div>
         </div>
 
-        <!-- CARD LOJISTA (FOTO 02) -->
+        <!-- CARD LOJISTA (FOTO 02 COM O BOTÃO DE MEET) -->
         <div class="bg-white border border-orange-200/80 rounded-[2rem] overflow-hidden shadow-xl shadow-orange-500/5 hover:border-orange-400 transition duration-500 flex flex-col justify-between group">
           <div class="p-8 sm:p-10">
             <span class="text-xs font-semibold uppercase tracking-widest text-tokto block mb-1">Para o Lojista</span>
@@ -196,11 +195,15 @@
 
           <div class="relative h-80 overflow-hidden mx-4 mb-4 rounded-[1.5rem]">
             <img src="foto02.png" alt="Lojista no balcão de vendas" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
             
-            <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-              <a href="https://tokto.com.br" class="bg-tokto hover:bg-orange-600 text-white text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition shadow-lg shadow-orange-500/20">
-                Criar Meu Link de Loja &rarr;
+            <!-- DOIS BOTAÕES NA FOTO DO LOJISTA (CADASTRAR + MEET) -->
+            <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-center gap-3">
+              <a href="https://tokto.com.br" class="w-full sm:w-auto text-center bg-tokto hover:bg-orange-600 text-white text-xs font-bold uppercase tracking-widest px-6 py-3.5 rounded-full transition shadow-lg shadow-orange-500/20">
+                Criar Meu Link &rarr;
+              </a>
+              <a href="https://agendamento-cupomclic.vercel.app" target="_blank" class="w-full sm:w-auto text-center bg-white/95 hover:bg-white text-stone-900 text-xs font-bold uppercase tracking-widest px-6 py-3.5 rounded-full transition shadow-lg backdrop-blur-md flex items-center justify-center gap-1.5">
+                <span>📅 Marque um Meet</span>
               </a>
             </div>
           </div>
@@ -209,7 +212,7 @@
       </div>
     </div>
 
-    <!-- SEÇÃO NOVA: LIVE COMMERCE (MESMO FORMATO DO BANNER DE TOPO COM FOTO 03) -->
+    <!-- SEÇÃO: LIVE COMMERCE -->
     <div class="relative rounded-[2.5rem] overflow-hidden p-6 sm:p-12 lg:p-16 border border-orange-200/80 bg-white/60 backdrop-blur-sm shadow-xl shadow-orange-500/5 mt-16">
       
       <!-- FOTO 03 DE BACKGROUND INTEGRADA COM DEGRADÊ -->
