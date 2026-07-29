@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOKTO — O Link Definitivo para sua Loja</title>
+  <title>TOKTO — O CLIC Que Faltava</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -17,42 +17,44 @@
           },
           colors: {
             tokto: '#F96302',
-            aesopBg: '#F6F4EF',
+            aesopBg: '#F7F5F0',
           }
         }
       }
     }
   </script>
   <style>
-    body { background-color: #F6F4EF; color: #1C1B1A; }
+    body { background-color: #F7F5F0; color: #1C1B1A; }
     
     .ambient-glow {
       background: 
-        radial-gradient(circle at 85% 15%, rgba(249, 99, 2, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 15% 75%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
+        radial-gradient(circle at 80% 20%, rgba(249, 99, 2, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 10% 60%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
     }
 
     .title-gradient-orange {
-      background: linear-gradient(135deg, #F96302 0%, #E05200 100%);
+      background: linear-gradient(135deg, #F96302 0%, #D97706 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* MÁSCARA ELEGANTE E FLUIDA NA FOTO DE CAPA */
-    .hero-image-blend {
-      mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
-                  linear-gradient(to bottom, black 90%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%),
-                          linear-gradient(to bottom, black 90%, transparent 100%);
+    /* COMPOSIÇÃO ORGÂNICA DA IMAGEM INTEGRADAS AO DESIGN */
+    .hero-blend-container {
+      background: linear-gradient(90deg, #F7F5F0 0%, rgba(247, 245, 240, 0.2) 50%, #F7F5F0 100%);
+    }
+    
+    .hero-image-mask {
+      mask-image: radial-gradient(circle at 60% 50%, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(circle at 60% 50%, black 40%, transparent 80%);
     }
   </style>
 </head>
 <body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white ambient-glow">
 
   <!-- TOP BAR (MINIMALISMO LUXUOSO) -->
-  <div class="border-b border-stone-300/40 bg-[#F6F4EF]/80 backdrop-blur-md text-[11px] tracking-widest uppercase py-3 px-6 text-stone-500">
+  <div class="border-b border-stone-300/40 bg-[#F7F5F0]/80 backdrop-blur-md text-[11px] tracking-widest uppercase py-3 px-6 text-stone-500">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-      <span class="text-tokto font-extrabold flex items-center gap-2 shrink-0">
+      <span class="text-tokto font-black flex items-center gap-2 shrink-0">
         <span class="w-2 h-2 rounded-full bg-tokto"></span> ECOSSISTEMA TOKTO
       </span>
       <div class="flex items-center gap-8 overflow-x-auto scrollbar-none font-medium tracking-normal text-xs text-stone-600">
@@ -67,7 +69,7 @@
   </div>
 
   <!-- HEADER PRINCIPAL -->
-  <header class="sticky top-0 z-50 bg-[#F6F4EF]/90 backdrop-blur-xl border-b border-stone-300/50">
+  <header class="sticky top-0 z-50 bg-[#F7F5F0]/90 backdrop-blur-xl border-b border-stone-300/50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
       <!-- LOGOS INTEGRADAS -->
@@ -88,69 +90,71 @@
     </div>
   </header>
 
-  <!-- HERO SECTION - LINK COMPLETO & CLICK AND BUY -->
-  <main class="max-w-7xl mx-auto px-6 py-10 lg:py-16 my-auto w-full">
+  <!-- HERO SECTION - COMPOSIÇÃO EDITORIAL ÚNICA -->
+  <main class="max-w-7xl mx-auto px-6 py-8 lg:py-16 my-auto w-full">
     
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+    <div class="relative rounded-[2.5rem] overflow-hidden p-6 sm:p-12 lg:p-16 border border-stone-300/60 bg-white/40 backdrop-blur-sm shadow-xl shadow-stone-200/50">
       
-      <!-- TEXTO DE SÍNTESE PERFEITA -->
-      <div class="lg:col-span-7 z-10">
-        <span class="inline-block bg-orange-500/10 text-tokto border border-orange-500/20 text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-          O Link Definitivo para Redes Sociais
+      <!-- FOTO DE BACKGROUND INTEGRADA AO TEXTO -->
+      <div class="absolute inset-0 z-0 opacity-25 lg:opacity-35 hero-image-mask pointer-events-none">
+        <img src="capa-banner.jpg" alt="Tokto Social Commerce" class="w-full h-full object-cover object-right">
+      </div>
+
+      <div class="relative z-10 max-w-3xl">
+        
+        <span class="inline-block bg-orange-500/10 text-tokto border border-orange-500/20 text-[11px] font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+          E-Commerce Social + WhatsApp + Instagram
         </span>
         
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-stone-900 leading-[1.05]">
-          O link completo para a rede social da sua loja. <br/>
-          <span class="title-gradient-orange">Clicou, comprou.</span>
+          O CLIC que faltava.
         </h1>
 
-        <p class="text-stone-700 text-lg sm:text-xl font-medium mt-6 leading-relaxed">
-          Cupons de desconto exclusivos e checkout instantâneo reunidos no mesmo lugar.
+        <p class="text-2xl sm:text-3xl font-extrabold mt-4 title-gradient-orange tracking-tight leading-snug">
+          Link exclusivo e checkout instantâneo reunidos no mesmo lugar.
         </p>
 
-        <p class="text-stone-500 text-base mt-3 max-w-xl font-normal leading-relaxed">
-          Transforme seguidores em clientes no ato. O ecossistema que conecta a vitrine do seu Instagram, cupons de atração e a facilidade de comprar num único clique.
+        <p class="text-stone-800 text-lg sm:text-xl font-bold mt-6 leading-snug">
+          Transforme seguidores em clientes no ato.
+        </p>
+
+        <p class="text-stone-600 text-base sm:text-lg mt-3 font-normal leading-relaxed max-w-2xl">
+          Conecte a vitrine do seu Instagram, cupons de atração no seu WhatsApp e a facilidade de comprar num único clique.
         </p>
 
         <!-- BOTOES DE AÇÃO -->
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="https://tokto.com.br" class="bg-tokto hover:bg-orange-600 text-white text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-xl shadow-orange-500/20 flex items-center justify-center gap-2">
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="https://tokto.com.br" class="bg-tokto hover:bg-orange-600 text-white text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-xl shadow-orange-500/25 flex items-center justify-center gap-2">
             <span>Criar Meu Link de Loja</span> &rarr;
           </a>
-          <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white/90 hover:bg-white border border-stone-300 text-stone-800 text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-sm">
+          <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white hover:bg-stone-50 border border-stone-300 text-stone-800 text-center font-bold text-sm px-9 py-4 rounded-full transition shadow-sm">
             Explorar Cupons Ativos
           </a>
         </div>
+
       </div>
 
-      <!-- FOTO INTEGRADA SEM QUADRADO BRANCO FLUTUANTE -->
-      <div class="lg:col-span-5 relative">
-        <div class="relative w-full h-[460px] lg:h-[520px] hero-image-blend">
-          <img src="capa-banner.jpg" alt="Tokto Social Commerce" class="w-full h-full object-cover rounded-3xl">
-        </div>
-        
-        <!-- TAG MINIMALISTA DE CHECKOUT -->
-        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-stone-200/80 shadow-xl flex items-center justify-between text-xs">
-          <div>
-            <div class="font-extrabold text-stone-900 uppercase tracking-wider text-[11px]">Experiência em 1-Clique</div>
-            <div class="text-[11px] text-stone-500">Sem burocracia, direto ao checkout</div>
-          </div>
-          <span class="bg-emerald-100 text-emerald-800 font-extrabold px-3 py-1.5 rounded-full text-[10px] tracking-wider uppercase">Compra na Hora</span>
+      <!-- BADGE FLUTUANTE DE EXPERIÊNCIA COMPLETA -->
+      <div class="mt-12 lg:mt-0 lg:absolute bottom-8 right-8 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-stone-200/80 shadow-2xl flex items-center gap-4 max-w-xs z-20">
+        <div class="w-10 h-10 rounded-xl bg-orange-100 text-tokto flex items-center justify-center font-black text-lg shrink-0">⚡</div>
+        <div>
+          <div class="font-extrabold text-stone-900 text-xs uppercase tracking-wider">Conversão em 1-Clic</div>
+          <div class="text-[11px] text-stone-500 mt-0.5">Instagram + WhatsApp + Checkout</div>
         </div>
       </div>
 
     </div>
 
-    <!-- SEÇÃO DUPLA - AS DUAS EXPERIÊNCIAS -->
-    <div class="pt-16 border-t border-stone-300/60">
+    <!-- SEÇÃO DUPLA - CONSUMIDOR & LOJISTA -->
+    <div class="pt-16 border-t border-stone-300/60 mt-16">
       
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-widest text-tokto block mb-2">Plataforma Integrada</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-tokto block mb-2">Ecossistema Completo</span>
         <h2 class="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-tight leading-snug">
           Selecione a sua jornada.
         </h2>
         <p class="text-stone-500 text-base mt-3 font-normal">
-          Seja para comprar com vantagens em 1 clique ou para ter o link definitivo da sua marca nas redes sociais.
+          Acesse a solução feita sob medida para a sua necessidade.
         </p>
       </div>
 
@@ -163,7 +167,7 @@
             <span class="text-xs font-semibold uppercase tracking-widest text-stone-400 block mb-1">Para o Consumidor</span>
             <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Cupom Clic</h3>
             <p class="text-stone-600 text-sm sm:text-base mt-3 leading-relaxed">
-              Encontre sua marca favorita no Instagram, resgate cupons exclusivos e compre direto num clique sem enrolação.
+              Receba cupons de atração no WhatsApp, encontre ofertas ativas e compre nas suas lojas favoritas num único clique.
             </p>
           </div>
 
@@ -185,7 +189,7 @@
             <span class="text-xs font-semibold uppercase tracking-widest text-tokto block mb-1">Para o Lojista</span>
             <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Credenciamento Tokto</h3>
             <p class="text-stone-600 text-sm sm:text-base mt-3 leading-relaxed">
-              Tenha o link perfeito na bio da sua rede social: Sacolinha do Instagram, cupons de conversão e checkout imediato.
+              Tenha o link definitivo na sua rede social: vitrine do Instagram, cupons de atração no WhatsApp e checkout no ato.
             </p>
           </div>
 
@@ -207,7 +211,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-stone-300/50 py-10 bg-[#F6F4EF] text-center text-xs text-stone-500 font-medium">
+  <footer class="border-t border-stone-300/50 py-10 bg-[#F7F5F0] text-center text-xs text-stone-500 font-medium">
     &copy; TOKTO & CUPOM CLIC. Todos os direitos reservados.
   </footer>
 
