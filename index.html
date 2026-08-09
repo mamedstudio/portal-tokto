@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOKTO — A IA que vende pelo lojista</title>
+  <title>TOKTO — O poder do clic</title>
   <link rel="icon" type="image/png" href="logo-ia.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,168 +12,169 @@
   <script>
     tailwind.config = { theme: { extend: {
       fontFamily: { sans: ['Plus Jakarta Sans','sans-serif'] },
-      colors: { tokto:'#F97316', cream:'#F7F5F0' }
+      colors: { tokto:'#F97316', cream:'#F7F5F0', ink:'#1C1B1A' }
     }}}
   </script>
   <style>
     body{background:#F7F5F0;color:#1C1B1A}
     .grad-text{background:linear-gradient(100deg,#F97316,#D97706);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    .marquee{animation:marquee 30s linear infinite}
+    .marquee{animation:marquee 26s linear infinite}
+    .marquee-slow{animation:marquee 40s linear infinite}
   </style>
 </head>
 <body class="font-sans antialiased">
 
-  <!-- TOP BAR -->
-  <div class="border-b border-stone-200 text-[11px] tracking-widest uppercase py-3 px-6 text-stone-500 bg-cream/90">
+  <!-- TOP BAR minimal -->
+  <div class="border-b border-stone-300/60 text-xs py-3 px-6">
     <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
-      <span class="text-tokto font-black flex items-center gap-2 shrink-0"><span class="w-2 h-2 rounded-full bg-tokto animate-pulse"></span> Ecossistema Tokto</span>
-      <div class="flex items-center gap-5 overflow-x-auto text-xs font-medium normal-case tracking-normal text-stone-600">
-        <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="text-tokto font-extrabold hover:underline shrink-0">✨ IA Tokto</a>
-        <a href="https://estudio-cupomclic.vercel.app" target="_blank" class="hover:text-tokto shrink-0">Estúdio</a>
-        <a href="https://agendamento-cupomclic.vercel.app" target="_blank" class="hover:text-tokto shrink-0">Agendamento</a>
-        <a href="https://provoucomprou-cupomclic.vercel.app" target="_blank" class="hover:text-tokto shrink-0">Provou Comprou</a>
-        <a href="https://note-cupomclic.vercel.app" target="_blank" class="hover:text-tokto shrink-0">Note</a>
+      <a href="mailto:ola@tokto.com.br" class="text-stone-500 hover:text-tokto transition">ola@tokto.com.br</a>
+      <div class="flex items-center gap-6 font-semibold text-stone-600">
+        <a href="#cupons" class="hover:text-tokto transition">Cupons</a>
+        <a href="#agora" class="hover:text-tokto transition">Agora</a>
+        <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="text-tokto font-extrabold hover:underline">✨ IA Tokto</a>
       </div>
     </div>
   </div>
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-xl border-b border-stone-200">
-    <div class="max-w-6xl mx-auto px-6 h-18 py-3 flex items-center justify-between">
+  <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-xl border-b border-stone-300/60">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
       <a href="https://tokto.com.br"><img src="logo-ia.png" alt="Tokto AI Agent" class="h-12 w-auto"></a>
       <div class="flex items-center gap-3">
         <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="hidden sm:inline-flex bg-tokto hover:bg-orange-600 text-white text-xs font-bold uppercase tracking-widest px-5 py-3 rounded-full transition shadow-md shadow-orange-500/20">✨ Testar a IA</a>
-        <a href="https://tokto.com.br" class="bg-stone-900 hover:bg-black text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full transition">Área do Lojista</a>
+        <a href="https://tokto.com.br" class="bg-ink hover:bg-black text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full transition">Área do Lojista</a>
       </div>
     </div>
   </header>
 
+  <!-- MARQUEE 1 -->
+  <div class="border-b border-stone-300/60 py-4 overflow-hidden">
+    <div class="marquee flex whitespace-nowrap text-2xl sm:text-3xl font-black uppercase tracking-tight text-stone-900">
+      <span class="pr-8">O poder do clic ✦ O poder do clic ✦ O poder do clic ✦ O poder do clic ✦ O poder do clic ✦ O poder do clic ✦&nbsp;</span>
+      <span class="pr-8 text-tokto">O poder do clic ✦ O poder do clic ✦ O poder do clic ✦ O poder do clic ✦ O poder do clic ✦ O poder do clic ✦&nbsp;</span>
+    </div>
+  </div>
+
   <main class="max-w-6xl mx-auto px-6">
 
-    <!-- HERO -->
-    <section class="py-14 lg:py-20 grid lg:grid-cols-[1.1fr_.9fr] gap-12 items-center">
-      <div>
-        <span class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-tokto text-[11px] font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-tokto animate-pulse"></span> IA Tokto · o agente do varejo físico
-        </span>
-        <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-stone-900 leading-[1.05]">
-          Uma IA que <span class="grad-text">pensa e vende</span> pelo lojista.
-        </h1>
-        <p class="text-lg sm:text-xl font-bold text-stone-700 mt-5 leading-snug">
-          O consumidor clica e compra na hora. Foto + preço viram cupom com QR e Pix em 30 segundos.
-        </p>
-        <p class="text-stone-500 mt-4 max-w-lg leading-relaxed text-sm sm:text-base">
-          A Tokto vê a peça, escreve a copy viral, monta o Cupom Clic e cutuca a loja sumida às 9h. O lojista só publica.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="bg-tokto hover:bg-orange-600 text-white text-center font-bold text-sm px-8 py-3.5 rounded-full transition shadow-lg shadow-orange-500/25">📸 Testar a IA agora →</a>
-          <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white hover:bg-stone-50 border border-stone-300 text-stone-800 text-center font-bold text-sm px-8 py-3.5 rounded-full transition">Explorar Cupons</a>
-        </div>
-        <div class="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-xs font-extrabold text-stone-600">
-          <span>🎁 R$ 0 mensalidade</span>
-          <span class="text-emerald-600">⚡ 15% só quando vende</span>
-          <span>💸 Pix na conta na entrega</span>
-        </div>
+    <!-- STATEMENT -->
+    <section class="py-16 lg:py-24">
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] max-w-4xl">
+        Criamos, evoluímos e reinventamos o varejo físico de agora e do próximo — com uma IA que <span class="grad-text">pensa e vende</span> pelo lojista.
+      </h1>
+      <div class="mt-8 flex flex-wrap gap-x-3 gap-y-2 text-[11px] font-extrabold uppercase tracking-widest text-stone-500">
+        <span>R$ 0 mensalidade</span><span class="text-tokto">/</span>
+        <span>15% só quando vende</span><span class="text-tokto">/</span>
+        <span>Pix na entrega</span><span class="text-tokto">/</span>
+        <span>QR no balcão</span><span class="text-tokto">/</span>
+        <span>Copy viral por IA</span>
       </div>
-
-      <!-- MOCKUP -->
-      <div class="max-w-xs w-full mx-auto">
-        <div class="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-xl shadow-stone-200/60">
-          <img src="produto-vestido.jpg" alt="Vestido Floral" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <div class="font-extrabold text-stone-900">Vestido Floral</div>
-            <div class="text-[11px] italic text-stone-600 bg-amber-50 border-l-2 border-amber-500 rounded-r px-2 py-1.5 mt-2">“Floral leve que abraça o verão — corre que esgota.”</div>
-            <div class="flex items-baseline gap-2 mt-3">
-              <span class="text-stone-400 line-through text-xs">de R$ 120</span>
-              <span class="text-emerald-600 font-black text-xl">R$ 92</span>
-            </div>
-            <div class="text-[10px] text-stone-500 mt-1">💰 você recebe <b class="text-tokto">R$ 80</b> no Pix</div>
-            <div class="flex gap-2 mt-3">
-              <span class="flex-1 text-center text-[11px] font-bold text-tokto border border-orange-400 rounded-lg py-2">✏️ Ajustar</span>
-              <span class="flex-1 text-center text-[11px] font-bold text-white bg-emerald-600 rounded-lg py-2">✅ Publicar</span>
-            </div>
-          </div>
-        </div>
+      <div class="mt-10 flex flex-col sm:flex-row gap-3">
+        <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="bg-tokto hover:bg-orange-600 text-white text-center font-bold text-sm px-8 py-4 rounded-full transition shadow-lg shadow-orange-500/25">📸 Testar a IA agora →</a>
+        <a href="https://cupomclic.tokto.com.br/cupons" class="bg-white hover:bg-stone-50 border border-stone-300 text-stone-800 text-center font-bold text-sm px-8 py-4 rounded-full transition">Explorar Cupons</a>
       </div>
     </section>
 
-    <!-- MARQUEE -->
-    <div class="border-y border-stone-200 py-3 overflow-hidden -mx-6 px-6 bg-white/60">
-      <div class="marquee flex whitespace-nowrap gap-10 text-[11px] font-extrabold uppercase tracking-[0.18em] text-stone-400">
-        <span>R$ 0 mensalidade ✦ 15% só quando vende ✦ Pix na entrega ✦ QR no balcão ✦ Copy viral por IA ✦ 4 cidades ✦ 244K de alcance ✦ Proatividade às 9h ✦</span>
-        <span>R$ 0 mensalidade ✦ 15% só quando vende ✦ Pix na entrega ✦ QR no balcão ✦ Copy viral por IA ✦ 4 cidades ✦ 244K de alcance ✦ Proatividade às 9h ✦</span>
+    <!-- CUPONS RECENTES (linhas editoriais) -->
+    <section id="cupons" class="pb-16">
+      <h2 class="text-xs font-extrabold uppercase tracking-widest text-tokto mb-6">Cupons recentes</h2>
+      <div class="border-t border-stone-300/60">
+        <a href="https://ia-tokto.mamedmarilia.workers.dev/?store=erica" target="_blank" class="block border-b border-stone-300/60 py-6 group">
+          <div class="flex flex-wrap items-baseline justify-between gap-3">
+            <span class="text-2xl sm:text-3xl font-extrabold group-hover:text-tokto transition">Vestido Floral</span>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-stone-500">Erica Store / Moda / Marília / de R$ 120 por R$ 92</span>
+          </div>
+        </a>
+        <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="block border-b border-stone-300/60 py-6 group">
+          <div class="flex flex-wrap items-baseline justify-between gap-3">
+            <span class="text-2xl sm:text-3xl font-extrabold group-hover:text-tokto transition">Camisa de Linho</span>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-stone-500">Dia dos Pais / Lençóis / 10.2K alcance</span>
+          </div>
+        </a>
+        <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="block border-b border-stone-300/60 py-6 group">
+          <div class="flex flex-wrap items-baseline justify-between gap-3">
+            <span class="text-2xl sm:text-3xl font-extrabold group-hover:text-tokto transition">Look do Sábado</span>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-stone-500">Bauru / 9K alcance / Copy viral / QR Pix</span>
+          </div>
+        </a>
+        <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="block border-b border-stone-300/60 py-6 group">
+          <div class="flex flex-wrap items-baseline justify-between gap-3">
+            <span class="text-2xl sm:text-3xl font-extrabold group-hover:text-tokto transition">Coleção de Domingo</span>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-stone-500">Sta. Cruz do Rio Pardo / 223K alcance / O2O</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- MARQUEE 2 -->
+    <div class="border-y border-stone-300/60 py-3 overflow-hidden -mx-6 px-6">
+      <div class="marquee-slow flex whitespace-nowrap text-[11px] font-extrabold uppercase tracking-[0.2em] text-stone-400">
+        <span class="pr-6">Vende 24h por dia ✦ Memória por loja ✦ Proatividade às 9h ✦ 4 cidades ✦ 244K de alcance ✦ Vende 24h por dia ✦ Memória por loja ✦ Proatividade às 9h ✦ 4 cidades ✦ 244K de alcance ✦&nbsp;</span>
+        <span class="pr-6">Vende 24h por dia ✦ Memória por loja ✦ Proatividade às 9h ✦ 4 cidades ✦ 244K de alcance ✦ Vende 24h por dia ✦ Memória por loja ✦ Proatividade às 9h ✦ 4 cidades ✦ 244K de alcance ✦&nbsp;</span>
       </div>
     </div>
 
-    <!-- BENTO (fios finos, ícones compactos) -->
-    <section class="py-14 lg:py-20">
-      <div class="max-w-xl mb-10">
-        <span class="text-tokto text-xs font-bold uppercase tracking-widest">Coesão total</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-2">Um cérebro, quatro vitrines.</h2>
-        <p class="text-stone-500 text-sm mt-3">A mesma IA cria o cupom, alimenta a vitrine, o WhatsApp e a live.</p>
+    <!-- AGORA (latest) -->
+    <section id="agora" class="py-16 grid lg:grid-cols-[.9fr_1.1fr] gap-12">
+      <div>
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-tokto mb-4">Agora</h2>
+        <p class="text-2xl sm:text-3xl font-extrabold tracking-tight leading-snug">A Tokto é a agente de IA do varejo físico — baseada no interior de São Paulo, acordada o mundo todo.</p>
+        <div class="relative mt-8 max-w-xs">
+          <img src="produto-vestido.jpg" alt="Vestido Floral" class="rounded-2xl w-full object-cover">
+          <div class="absolute bottom-3 left-3 bg-white/95 rounded-full px-4 py-2 text-[11px] font-extrabold uppercase tracking-widest">de R$ 120 por R$ 92</div>
+        </div>
       </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200 border border-stone-200 rounded-3xl overflow-hidden">
-        <div class="bg-white p-6 sm:col-span-2 bg-gradient-to-br from-orange-50 to-white">
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-xl bg-orange-100 text-tokto flex items-center justify-center text-base shrink-0">🧠</span>
-            <h3 class="text-lg font-extrabold text-stone-900">IA Tokto</h3>
-          </div>
-          <p class="text-sm text-stone-500 mt-3 leading-relaxed">Copywriter e parceira. Vê a foto, escreve a copy, calcula o preço e publica. Memória por loja, proatividade às 9h.</p>
+      <div class="border-t border-stone-300/60">
+        <div class="border-b border-stone-300/60 py-5">
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-tokto">Rede</span>
+          <p class="text-sm text-stone-600 mt-2 leading-relaxed">Quatro cidades conectadas — Marília, Bauru, Lençóis e Sta. Cruz do Rio Pardo — somando 244K de alcance distribuindo cupons de graça.</p>
         </div>
-        <div class="bg-white p-6">
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-xl bg-orange-100 text-tokto flex items-center justify-center text-base shrink-0">🏷️</span>
-            <h3 class="text-base font-extrabold text-stone-900">Cupom Clic</h3>
-          </div>
-          <p class="text-sm text-stone-500 mt-3">Cupons com QR e Pix, retirada no balcão.</p>
+        <div class="border-b border-stone-300/60 py-5">
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-tokto">Proatividade</span>
+          <p class="text-sm text-stone-600 mt-2 leading-relaxed">A Tokto cruza calendário, memória e inatividade — e manda o cupom pronto às 9h. O lojista responde “sim” e publica.</p>
         </div>
-        <div class="bg-white p-6">
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-xl bg-orange-100 text-tokto flex items-center justify-center text-base shrink-0">🔗</span>
-            <h3 class="text-base font-extrabold text-stone-900">Link da Loja</h3>
-          </div>
-          <p class="text-sm text-stone-500 mt-3">Vitrine definitiva na bio do Instagram.</p>
+        <div class="border-b border-stone-300/60 py-5">
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-tokto">Merchandising</span>
+          <p class="text-sm text-stone-600 mt-2 leading-relaxed">Cada cupom agora carrega um slot de mídia para parceiros não-concorrentes — a próxima receita da rede.</p>
         </div>
-        <div class="bg-white p-6">
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-xl bg-orange-100 text-tokto flex items-center justify-center text-base shrink-0">🎥</span>
-            <h3 class="text-base font-extrabold text-stone-900">Live Commerce</h3>
-          </div>
-          <p class="text-sm text-stone-500 mt-3">Venda direta na tela, sem DM.</p>
-        </div>
-        <div class="bg-white p-6 sm:col-span-2 lg:col-span-3">
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-xl bg-orange-100 text-tokto flex items-center justify-center text-base shrink-0">🤖</span>
-            <h3 class="text-base font-extrabold text-stone-900">Encontrável por IAs</h3>
-          </div>
-          <p class="text-sm text-stone-500 mt-3">Cupons legíveis por ChatGPT, Perplexity e Google AI — a próxima SEO.</p>
+        <div class="border-b border-stone-300/60 py-5">
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-tokto">IA</span>
+          <p class="text-sm text-stone-600 mt-2 leading-relaxed">Cupons legíveis por ChatGPT, Perplexity e Google AI — a loja encontrável na próxima busca.</p>
         </div>
       </div>
     </section>
 
-    <!-- PROATIVIDADE -->
-    <section class="py-14 lg:py-20 grid lg:grid-cols-2 gap-12 items-center bg-gradient-to-b from-transparent via-orange-50/60 to-transparent -mx-6 px-6">
-      <div>
-        <span class="text-tokto text-xs font-bold uppercase tracking-widest">Proatividade</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-2 leading-tight">Ela não espera.<br>Ela <span class="grad-text">cutuca às 9h.</span></h2>
-        <p class="text-stone-500 text-sm sm:text-base mt-4 max-w-md leading-relaxed">Todo dia a Tokto cruza calendário, memória da loja e inatividade — e manda o cupom pronto no WhatsApp. O lojista responde “sim” e publica.</p>
+    <!-- TIMELINE (metamorfose) -->
+    <section class="pb-16">
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-2xl sm:text-3xl font-black">2024 — 2026</span>
       </div>
-      <div class="max-w-xs w-full mx-auto bg-white border border-stone-200 rounded-3xl p-4 shadow-xl shadow-stone-200/60">
-        <div class="flex items-center gap-2.5 pb-3 border-b border-stone-100">
-          <div class="w-8 h-8 rounded-full bg-tokto flex items-center justify-center text-sm">🐰</div>
-          <div><div class="font-extrabold text-xs text-stone-900">Tokto</div><div class="text-[10px] text-emerald-600">online · 09:00</div></div>
+      <p class="text-sm text-stone-500 mb-10">Do aplicativo ao agente: a metamorfose do ecossistema.</p>
+      <div class="border-l-2 border-tokto/40 pl-8 space-y-10">
+        <div class="relative">
+          <span class="absolute -left-[39px] top-1 w-3 h-3 rounded-full bg-tokto"></span>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-stone-400">2024 · App</span>
+          <p class="text-lg font-extrabold mt-1">A lagarta: devorar aprendizado.</p>
+          <p class="text-sm text-stone-500 mt-1 max-w-xl">Primeiros lojistas, primeiros cupons, o modelo validado: 15% só quando vende, Pix na entrega.</p>
         </div>
-        <div class="bg-stone-100 rounded-2xl rounded-tl-sm p-3 mt-3 text-xs text-stone-700 leading-relaxed">
-          ☀️ Bom dia, Erica! Dia dos Pais é domingo. Preparei: 👔 <b>Camisa de Linho</b> — de R$ 149 por R$ 113,90. Responda ✅ pra publicar.
+        <div class="relative">
+          <span class="absolute -left-[39px] top-1 w-3 h-3 rounded-full bg-tokto"></span>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-stone-400">2025 · Web app</span>
+          <p class="text-lg font-extrabold mt-1">O casulo: tudo se reorganiza.</p>
+          <p class="text-sm text-stone-500 mt-1 max-w-xl">Fricção zero: Cupom Clic, link da loja, live commerce e a ponte do WhatsApp.</p>
         </div>
-        <div class="bg-tokto rounded-2xl rounded-tr-sm p-2 mt-2 ml-auto w-fit text-xs font-black text-white">✅</div>
+        <div class="relative">
+          <span class="absolute -left-[39px] top-1 w-3 h-3 rounded-full bg-tokto"></span>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-stone-400">2026 · AI agent</span>
+          <p class="text-lg font-extrabold mt-1">A borboleta: o voo.</p>
+          <p class="text-sm text-stone-500 mt-1 max-w-xl">Uma IA que vê a peça, escreve a copy, monta o cupom e cutuca às 9h. O lojista só publica.</p>
+        </div>
       </div>
     </section>
 
     <!-- JORNADAS (full-bleed) -->
-    <section class="grid md:grid-cols-2 gap-5 pb-14">
+    <section class="grid md:grid-cols-2 gap-5 pb-16">
       <div class="relative min-h-[420px] flex items-end overflow-hidden rounded-[2rem] group">
         <img src="foto01.png" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700">
         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
@@ -200,23 +201,23 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section class="pb-16">
-      <div class="rounded-[2.5rem] bg-gradient-to-br from-tokto to-orange-600 p-10 sm:p-14 text-center shadow-xl shadow-orange-500/25">
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">Pronto pra ter uma parceira<br>que trabalha 24h por dia?</h2>
-        <p class="text-orange-100 text-sm mt-3">Deixou de ser ferramenta. Virou parceira.</p>
-        <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="inline-block mt-7 bg-white text-tokto font-bold text-sm px-10 py-4 rounded-full shadow-lg">📸 Testar a IA Tokto →</a>
-      </div>
+    <section class="pb-20 text-center">
+      <h2 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight max-w-3xl mx-auto">Deixou de ser ferramenta.<br><span class="grad-text">Virou parceira.</span></h2>
+      <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="inline-block mt-8 bg-ink hover:bg-black text-white font-bold text-sm px-10 py-4 rounded-full transition shadow-xl">📸 Testar a IA Tokto →</a>
     </section>
 
   </main>
 
-  <footer class="border-t border-stone-200 py-8 text-xs text-stone-500 bg-cream">
+  <!-- FOOTER -->
+  <footer class="border-t border-stone-300/60 py-8 text-xs text-stone-500">
     <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <span>&copy; TOKTO & CUPOM CLIC. Todos os direitos reservados.</span>
-      <div class="flex gap-5">
+      <span>&copy; TOKTO & CUPOM CLIC · 2024—2026</span>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://estudio-cupomclic.vercel.app" target="_blank" class="hover:text-tokto">Estúdio</a>
+        <a href="https://agendamento-cupomclic.vercel.app" target="_blank" class="hover:text-tokto">Agendamento</a>
+        <a href="https://provoucomprou-cupomclic.vercel.app" target="_blank" class="hover:text-tokto">Provou Comprou</a>
+        <a href="https://note-cupomclic.vercel.app" target="_blank" class="hover:text-tokto">Note</a>
         <a href="https://ia-tokto.mamedmarilia.workers.dev/" target="_blank" class="text-tokto font-bold hover:underline">✨ IA Tokto</a>
-        <a href="https://cupomclic.tokto.com.br/cupons" class="hover:text-tokto">Cupons</a>
-        <a href="https://agendamento-cupomclic.vercel.app" target="_blank" class="hover:text-tokto">Meet</a>
       </div>
     </div>
   </footer>
