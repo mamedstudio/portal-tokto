@@ -125,13 +125,14 @@
       </div>
     </div>
 
-    <!-- BENTO: quadrados no desktop, compactos no mobile -->
+    <!-- COESÃO: 4 quadrados + depoimento -->
     <section class="py-14 lg:py-16">
       <div class="max-w-xl mb-8">
         <span class="text-tokto text-xs font-bold uppercase tracking-widest">Coesão total</span>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-2">Um cérebro, quatro vitrines.</h2>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-5 gap-px bg-stone-200 border border-stone-200 rounded-3xl overflow-hidden">
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-stone-200 border border-stone-200 rounded-3xl overflow-hidden">
         <div class="bg-white p-4 sm:p-5 flex flex-col justify-between gap-6 sm:gap-0 sm:aspect-square">
           <span class="text-[11px] font-black text-tokto">01</span>
           <div><div class="font-extrabold text-stone-900 text-sm">IA Tokto</div><div class="text-[10px] text-stone-500 mt-1">copy, preço e publicação</div></div>
@@ -148,9 +149,17 @@
           <span class="text-[11px] font-black text-tokto">04</span>
           <div><div class="font-extrabold text-stone-900 text-sm">Live Commerce</div><div class="text-[10px] text-stone-500 mt-1">venda na tela</div></div>
         </div>
-        <div class="bg-white p-4 sm:p-5 flex flex-col justify-between gap-6 sm:gap-0 sm:aspect-square col-span-2 sm:col-span-1">
-          <span class="text-[11px] font-black text-tokto">05</span>
-          <div><div class="font-extrabold text-stone-900 text-sm">IA-Ready</div><div class="text-[10px] text-stone-500 mt-1">achável por ChatGPT e Google</div></div>
+      </div>
+
+      <!-- DEPOIMENTO -->
+      <div class="mt-8 grid lg:grid-cols-[.35fr_.65fr] gap-8 items-center bg-white border border-stone-200 rounded-[2rem] p-6 sm:p-10 shadow-xl shadow-stone-200/50">
+        <img src="depoimento-erica.jpg" alt="Érica, da Érica Store" class="w-full max-w-[280px] mx-auto rounded-2xl object-cover aspect-[3/4]">
+        <div>
+          <span class="block text-6xl font-black text-tokto leading-none">“</span>
+          <p class="text-lg sm:text-2xl font-extrabold text-stone-900 leading-snug mt-1">Minhas lives vendem na hora com um clique e meus posts é agora meu balcão. É faturamento de segunda a segunda.</p>
+          <div class="mt-6 text-xs font-extrabold uppercase tracking-widest text-stone-500">
+            Érica · <span class="text-tokto">Érica Store</span> · Sta. Cruz do Rio Pardo
+          </div>
         </div>
       </div>
     </section>
@@ -176,7 +185,7 @@
 
   </main>
 
-  <!-- JORNADAS: fotos vazadas, texto flutuante, sem moldura -->
+  <!-- JORNADAS: fotos vazadas, texto flutuante -->
   <section class="relative min-h-[75vh] flex items-end overflow-hidden group">
     <img src="foto01.png" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700">
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
